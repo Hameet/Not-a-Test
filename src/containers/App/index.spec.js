@@ -1,10 +1,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
-import Enzyme from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
 
-Enzyme.configure({ adapter: new Adapter() })
 import configureStore from 'redux-mock-store'
 
 import App from '.'
@@ -43,27 +39,5 @@ describe('containers:App', () => {
         users
       })
     )
-  })
-
-  it(`maps handleClick to dispatch ${USER_REGISTERED} action`, () => {
-    const user = 'user1'
-    const userInpu = function handleOnSubmit (e) {
-      return e.target.elements['user']
-    }
-
-    const store = mockStore({ user })
-
-    store.dispatch = jest.fn()
-
-    const wrapper = shallow(<App store={store} user={user} />)
-
-    wrapper.props().handleOnSubmit(userInput.value)
-
-    expect(store.dispatch).toHaveBeenCalledWith({
-      type: USER_REGISTERED,
-      payload: {
-        user: userInput.value
-      }
-    })
   })
 })

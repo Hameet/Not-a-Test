@@ -1,17 +1,8 @@
-import { mapIndexed } from 'ramda-adjunct'
 import { sortBy, sort, pipe, compose, toLower, prop, map } from 'ramda'
-import styled from 'styled-components'
 import React from 'react'
-import { deleteUser } from '../../state/actions'
-export const StyledList = styled.section`
-  margin: auto;
-  margin-bottom: 10px;
-  width: 90%;
-  width: 292px;
-`
-const diff = sortBy(compose(toLower, prop(0)))
+import { Fragment } from 'react'
 
-const sorted = pipe(diff, map)
+// const diff = sortBy(compose(toLower, prop(0))) Was trying to use this fn here to sort names but it crashes the app after the first sort
 
 export default function App ({
   handleOnSubmit,
@@ -19,10 +10,6 @@ export default function App ({
   users,
   handleOnDelete
 }) {
-  const does = sort((a, b) => a.localeCompare(b))
-
-  console.log('button', handleOnDelete)
-
   return (
     <div className='App'>
       <h1>Welcome {latestUser}</h1>
@@ -35,12 +22,14 @@ export default function App ({
       <ul>
         {map((user, index) => {
           return (
-            <li key={index} data={user}>
-              {user}
-              <button onClick={handleOnDelete.bind(index, null)}>
-                &nbsp;X
-              </button>
-            </li>
+            <Fragment>
+              <li key={user.toString()} data={user}>
+                {user}
+                <button onClick={handleOnDelete.bind(index, null)}>
+                  &nbsp;X
+                </button>
+              </li>
+            </Fragment>
           )
         }, users)}
       </ul>

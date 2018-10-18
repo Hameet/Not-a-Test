@@ -1,5 +1,5 @@
 TN:
-SF:/home/hameet/Downloads/wj4j-not-a-test (1)/src/setupTests.js
+SF:/home/hameet/Projects/Not-a-Test/src/setupTests.js
 FNF:0
 FNH:0
 DA:7,4
@@ -10,29 +10,26 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/hameet/Downloads/wj4j-not-a-test (1)/src/components/App/index.js
-FN:16,App
-FN:22,(anonymous_1)
-FN:36,(anonymous_2)
+SF:/home/hameet/Projects/Not-a-Test/src/components/App/index.js
+FN:6,App
+FN:12,(anonymous_1)
+FN:26,(anonymous_2)
 FNF:3
 FNH:1
 FNDA:1,App
 FNDA:0,(anonymous_1)
 FNDA:0,(anonymous_2)
-DA:6,2
-DA:12,2
-DA:14,2
-DA:22,1
-DA:24,1
-DA:26,1
-DA:37,0
-LF:7
-LH:6
+DA:12,1
+DA:14,1
+DA:16,1
+DA:27,0
+LF:4
+LH:3
 BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/hameet/Downloads/wj4j-not-a-test (1)/src/containers/App/index.js
+SF:/home/hameet/Projects/Not-a-Test/src/containers/App/index.js
 FN:8,mapStateToProps
 FN:15,mapDispatchToProps
 FN:17,(anonymous_2)
@@ -59,7 +56,7 @@ BRF:2
 BRH:0
 end_of_record
 TN:
-SF:/home/hameet/Downloads/wj4j-not-a-test (1)/src/state/actions/index.js
+SF:/home/hameet/Projects/Not-a-Test/src/state/actions/index.js
 FN:3,userRegistered
 FN:12,deleteUser
 FNF:2
@@ -74,7 +71,7 @@ BRF:0
 BRH:0
 end_of_record
 TN:
-SF:/home/hameet/Downloads/wj4j-not-a-test (1)/src/state/reducers/index.js
+SF:/home/hameet/Projects/Not-a-Test/src/state/reducers/index.js
 FN:6,rootReducer
 FNF:1
 FNH:1
@@ -99,7 +96,7 @@ BRF:9
 BRH:9
 end_of_record
 TN:
-SF:/home/hameet/Downloads/wj4j-not-a-test (1)/src/state/selectors/index.js
+SF:/home/hameet/Projects/Not-a-Test/src/state/selectors/index.js
 FN:3,getUsers
 FNF:1
 FNH:1

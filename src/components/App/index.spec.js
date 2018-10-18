@@ -1,23 +1,11 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import toJson from 'enzyme-to-json'
-import Enzyme from 'enzyme'
-import Adapter from 'enzyme-adapter-react-16'
-
-import { map } from 'ramda'
-
-Enzyme.configure({ adapter: new Adapter() })
 
 import App from '.'
 
 describe('components:App', function () {
   it('renders the App and CSS properties properly', () => {
-    const users = ['user', 'user2']
-    const texts = map(user => user, users)
-
-    //     expect(texts).to.eql(users)
-    //   })
-    expect(toJson(shallow(<App texts={users} />))).toMatchSnapshot()
+    expect(toJson(shallow(<App>App</App>))).toMatchSnapshot()
   })
 })
 

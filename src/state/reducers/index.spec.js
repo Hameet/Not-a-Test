@@ -1,5 +1,4 @@
 import rootReducer from '.'
-import { isEmpty } from 'ramda'
 
 import { initialState, USER_REGISTERED, DELETE_USER } from '../constants'
 import { userRegistered, deleteUser } from '../actions'
@@ -36,7 +35,7 @@ describe('state:reducers', () => {
         users: []
       })
     })
-
+    // This is just a hack & slash approach to get the test working, there's probably a better way to do it
     it(`delete a user on a ${DELETE_USER} action`, () => {
       const newIndex = 1
       const state = {
