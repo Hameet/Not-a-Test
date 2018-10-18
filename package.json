@@ -5,20 +5,46 @@
   "keywords": [],
   "main": "src/index.js",
   "dependencies": {
+    "connected-react-router": "^4.5.0",
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.6.0",
+    "enzyme-to-json": "^3.3.4",
+    "jest-enzyme": "^7.0.0",
+    "jest-styled-components": "^6.2.1",
     "ramda": "0.25.0",
     "ramda-adjunct": "2.10.0",
     "react": "16.5.2",
     "react-dom": "16.5.2",
     "react-redux": "5.0.7",
+    "react-router": "^4.3.1",
     "react-scripts": "2.0.3",
-    "redux": "4.0.0"
+    "redux": "4.0.0",
+    "redux-devtools-extension": "^2.13.5",
+    "redux-mock-store": "^1.5.3",
+    "styled-components": "^3.4.9"
   },
   "devDependencies": {},
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "coverage": "react-scripts test --env=jsdom --coverage"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "!src/constants.js",
+      "!src/index.js",
+      "!src/pages/index.js",
+      "!src/registerServiceWorker.js",
+      "!src/state/constants.js",
+      "src/**/*.{js,jsx}",
+      "!<rootDir>/node_modules/",
+      "!src/setUpTest.js"
+    ],
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "browserslist": [
     ">0.2%",
